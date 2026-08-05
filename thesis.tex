@@ -32,18 +32,14 @@
              % sort&compress (sorts and compresses numerical citations;
              %           is identical to sort when used with textrefs)
 
-\usepackage{placeins}   % for FloatBarrier
+\usepackage{placeins}
 \usepackage[T1]{fontenc}
 \usepackage{rotating}
-% \usepackage{capt-of}  % using this broke my \ref{tab:triggers} table
-% \usepackage{subfig}   % using this broke my \ref{tab:triggers} table
 \usepackage{multirow}
 \usepackage{threeparttable}
-% \usepackage{booktabs}
 \usepackage{makecell} 
 \usepackage[caption=false]{subfig}
-\captionsetup[subfigure]{margin=15pt} %{style=default, margin=0pt, parskip=0pt, hangindent=0pt, indention=0pt, singlelinecheck=true}
-% \usepackage{subcaption}
+\captionsetup[subfigure]{margin=15pt}
 \usepackage{lineno}
 \usepackage{amssymb}
 \usepackage{pifont} % http://ctan.org/pkg/pifont
@@ -55,30 +51,19 @@
 \frontmatter                        % All the items before Chapter 1 go  in ``frontmatter''
 
 % Line-breaks in the title have to be protected with `\protect`.
-% \title{Gnus and you \protect\\ a Brief}
-\title{}           % Title
+\title{A Search for New Physics in Fully Leptonic Final States of Top Quark Pair Production Using Simulation-Based Inference and Standard Model Effective Field Theory}   % Title
 
-\author{Christopher McGrady}              % Author's name
-\work{Dissertation}                 % ``Dissertation'' or ``Thesis''
-\degaward{Doctor of Philosophy}     % Degree you're aiming for.
-                                    % Should be one of the following options:
-                                    % ``Doctor of Philosophy'' (do NOT include ``in Subject'')
-                                    % ``Master of Science \\ in \\ Subject''
-\advisor{Kevin Lannon}              % Advisor's name
-\program{Physics}                   % Name of the graduate program
+\author{Christopher McGrady}
+\work{Dissertation}
+\degaward{Doctor of Philosophy}
+\advisor{Kevin Lannon}
+\program{Physics}
 
-\maketitle                          % The title page is created now
+\maketitle
 
- % You must use either the \makecopyright option or the \makepublicdomain option.
- % \copyrightholder{}               % If you're not the copyright holder
- % \copyrightyear{}                 % If the copyright is not for the current year
-\makecopyright                      % If not making your work public domain
-                                    % uncomment out \makecopyright
- % \makepublicdomain                % Uncomment this to make your work public domain
+\makecopyright 
 
- % Including an abstract is optional for a master's thesis, and required for a
- % doctoral dissertation.
-% \include{abstract}                  % put it in a file to be included
+\include{abstract/abstract}
 
  % Including a dedication is optional.
 % \renewcommand{\dedicationname}{\mbox{}} % Replace \mbox{} if you want something else.
@@ -117,6 +102,18 @@
 
 % Compile the document using pdflatex thesis.tex
 \linenumbers
+
+\include{introduction/introduction}
+\include{theory/theory}
+\include{accelerator_and_detector/accelerator_and_detector}
+\include{data_and_mc/data_and_mc}
+\include{object_reconstruction/object_reconstruction}
+\include{event_selection/event_selection}
+\include{data_to_mc_corrections/data_to_mc_corrections}
+\include{systematics/systematics}
+\include{statistical_methods/statistical_methods}
+\include{results/results}
+\include{summary/summary}
 
 % If you have appendices, add them here.
 % Begin each one with \chapter{TITLE} as before. The \appendix command takes
